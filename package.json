@@ -1,28 +1,48 @@
 {
-  "name":"diffie-hellman-ts",
-  "description":"Diffie-hellman key exchange implementation in typescript.",
-  "main":"index.js",
-  "repository":{
-    "type":"git",
-    "url":"git+https://github.com/willyandan/diffie-hellman-key-exchange.git"
+  "name": "diffie-hellman-ts",
+  "version": "0.0.1",
+  "description": "Diffie-hellman key exchange implementation in typescript.",
+  "main": "lib/app.js",
+  "typings": "lib/app.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willyandan/diffie-hellman-key-exchange.git"
   },
-  "keywords":["diffie","hellman","diffie-hellman","key exchange","typescript"],
-  "author":"Willyan Antunes <willyan.dantunes@gmail.com> (https://github.com/willyandan)",
-  "license" : {
-    "type" : "MIT",
-    "url" : "https://www.opensource.org/licenses/mit-license.php"
+  "keywords": [
+    "diffie",
+    "hellman",
+    "diffie-hellman",
+    "key exchange",
+    "typescript"
+  ],
+  "author": "Willyan Antunes <willyan.dantunes@gmail.com> (https://github.com/willyandan)",
+  "license": {
+    "type": "MIT",
+    "url": "https://www.opensource.org/licenses/mit-license.php"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
   "dependencies": {
     "big-integer": "^1.6.48"
   },
-  "scripts":{
-    "build":"tsc"
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "test":"jest"
   },
-  "files":[
+  "files": [
     "lib/**/*"
-  ]
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": ["ts", "js"],
+    "testRegex": "^.+\\.spec\\.ts$"
+  }
 }
