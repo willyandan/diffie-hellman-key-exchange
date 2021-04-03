@@ -1,9 +1,28 @@
 {
+  "name":"diffie-hellman-ts",
+  "description":"Diffie-hellman key exchange implementation in typescript.",
+  "main":"index.js",
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/willyandan/diffie-hellman-key-exchange.git"
+  },
+  "keywords":["diffie","hellman","diffie-hellman","key exchange","typescript"],
+  "author":"Willyan Antunes <willyan.dantunes@gmail.com> (https://github.com/willyandan)",
+  "license" : {
+    "type" : "MIT",
+    "url" : "https://www.opensource.org/licenses/mit-license.php"
+  },
   "devDependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
   "dependencies": {
     "big-integer": "^1.6.48"
-  }
+  },
+  "scripts":{
+    "build":"tsc"
+  },
+  "files":[
+    "lib/**/*"
+  ]
 }
